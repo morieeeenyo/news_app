@@ -5,7 +5,14 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>React Native学習開始したやで</Text>
+      <View
+        style={{
+          height: 100,
+          width: '100%',
+          borderColor: 'gray',
+          borderWidth: 1,
+        }}
+      ></View>
       <StatusBar style="auto" />
     </View>
   )
