@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 
+// cssと似たような記法でスタイルを整える
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,11 +18,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   leftContainer: {
-    // backgroundColor: 'red',
     width: 100
   },
   rightContainer: {
-    // backgroundColor: 'blue',
     flex: 1,
     padding: 10,
     justifyContent: 'space-between'
@@ -38,6 +37,7 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={styles.container}>
+      {/* View→divタグ */}
       <View
         style={styles.itemContainer}
       >
@@ -45,6 +45,7 @@ export default function App() {
           <Image style={{width: 100, height: 100}} source={{uri: "https://picsum.photos/100"}} />
         </View>
         <View style={styles.rightContainer} >
+          {/* numberOfLines→行数。オーバーしたら「...」で省略される */}
           <Text numberOfLines={3} style={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </Text>
